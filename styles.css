@@ -11,19 +11,49 @@ html, body {
 body {
     display: grid;
     line-height: 1.6;
-    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+    grid-template: repeat(8, 1fr) / repeat(6, 1fr);
     font-family: Roboto, sans-serif;
 }
 
 .sidebar {
     grid-column: 1/2;
-    grid-row: 1/7;
+    grid-row: 1/9;
     background-color: rgb(29, 148, 188);
     color: white;
     padding: .5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .header {
-    grid-column: 2/7
+    grid-column: 2/7;
+    grid-row: 1/2;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header > * {
+    border: 1px solid blue;
+}
+
+.header .left {
+    grid-column: 1/2;
+}
+
+.header .right {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+}
+
+.header .right .top {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: flex-end;
+}
+
+.header .buttons {
+    display: flex;
+    justify-content: space-between;
 }
