@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -34,6 +34,7 @@ body {
 
 .header > * {
     border: 1px solid blue;
+    padding: 1rem;
 }
 
 .header .left {
@@ -49,11 +50,33 @@ body {
 .header .right .top {
     display: flex;
     gap: 2rem;
-    padding: 1rem;
     justify-content: flex-end;
 }
 
 .header .buttons {
     display: flex;
     justify-content: space-between;
+}
+
+#search {
+    width: 90%;
+}
+
+.content {
+    grid-row: 2/9;
+    grid-column:2/7;
+    display: grid;
+    grid-template: 1fr/ 3fr 1fr;
+}
+
+.content > * > * {
+    border: 1px solid blue;
+}
+
+.projects {
+    padding: 2rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(8rem, 1fr));
+    grid-template-columns: 1fr 1fr;
 }
